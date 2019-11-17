@@ -32,11 +32,17 @@ todos:[{
   })})
 
  }  
+ delTodo=(id)=>{
+   this.setState({todo:[...this.state.todos.filter(todo=>todo.id!==id)]});
+
+
+
+ }
   render() { 
     return ( 
 <div className="App">
       <h1>APP</h1>
-      <Todos todos={this.state.todos} markComplete={this.markComplete}/>
+      <Todos todos={this.state.todos} markComplete={this.markComplete} delTodo={this.delTodo}/>
       
       </div>
      );
