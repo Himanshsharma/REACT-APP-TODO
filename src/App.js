@@ -22,6 +22,7 @@ todos:[{
 
 
    }
+   // toggle completed todo
  markComplete=(id)=>{
   this.setState({todos:this.state.todos.map(todo=>{
     if(todo.id===id){
