@@ -7,7 +7,7 @@ class TodoItem extends Component {
         {return{
             background:'#f4f4f4',
             padding:'10px',
-            borderBottom:'1px #ccc dotted'
+            borderBottom:'1px #ccc dotted',
             textDecoration:'line-through'}}
             else{
                 return {
@@ -23,6 +23,7 @@ class TodoItem extends Component {
         
         return (  
 <div style={this.getStyle()}>
+<input type="check-box" name=""></input>
 <p>{ this.props.todo.title }</p>
 </div>
 
