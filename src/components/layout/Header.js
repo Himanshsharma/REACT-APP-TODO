@@ -2,7 +2,7 @@ import React from 'react';
 function Header(){
 
 return(
-<header>
+<header style={HeaderStyle}>
 
 
 <h1>tifoof</h1>
@@ -10,5 +10,12 @@ return(
 
 </header>
 )
+}
+const HeaderStyle={
+    height:'200px',
+    background:'#333',
+    color:'#fff',
+    textAlign:'center',
+
 }
 export default Header;
