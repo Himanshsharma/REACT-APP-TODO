@@ -24,7 +24,7 @@ render() {
         
         return (  
 <div style={this.getStyle()}>
-<h2><input type="checkbox" onChange={this.props.markComplete.bind(this, this.props.todo.id)}/> {'                '}{ this.props.todo.title } </h2>
+<h2><input type="checkbox" onChange={this.props.markComplete.bind(this, this.props.todo.id)}/> {'                '}{ this.props.todo.title }</h2>
 <button style={btnStyle} onClick={this.props.delTodo.bind(this , this.props.todo.id)}>x</button>
 </div>
 
@@ -35,6 +35,7 @@ TodoItem.propTypes={
     todos: PropTypes.array.isRequired
   }
   const btnStyle={
+     
       background:'#ff0000',
       color:'#fff',
       border:'none',
