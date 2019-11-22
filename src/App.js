@@ -3,6 +3,7 @@ import "./App.css"
 import Header from './components/layout/Header.js';
 import Todos from "./components/Todos";
 import AddTodo from "./components/AddTodo";
+import uuid from 'uuid';
 
 class App extends Component {
   state = { 
@@ -37,15 +38,20 @@ todos:[{
  }  
  delTodo=(id)=>{
    this.setState({todos:[...this.state.todos.filter(todo=>todo.id!==id)]});
-
-
-
+ }
+ addTodo=(title)=>{
+   const newTodo={
+     id:uuid.v4(),
+     title,
+     completed:false,
+   }
+   this.setState({todos:[...this.state.todos,newTodo]})
  }
   render() { 
     return ( 
 <div className="App">
 <div class="container">
-<Header></Header><AddTodo />
+<Header></Header><AddTodo addTodo={this.addTodo}/>
 <Todos todos={this.state.todos} markComplete={this.markComplete} delTodo={this.delTodo}/>
 
 </div>

@@ -5,14 +5,15 @@ return(
 <header style={HeaderStyle}>
 
 
-<h1>tifoof</h1>
+<h1>TODO LIST</h1>
 
 
 </header>
 )
 }
 const HeaderStyle={
-    height:'200px',
+    paddingTop:'20px',
+    height:'100px',
     background:'#333',
     color:'#fff',
     textAlign:'center',
